@@ -162,6 +162,10 @@ class Gym: JSONConvertibleObject, WebHookEvent, Hashable {
 
     static var cache: MemoryCache<Gym>?
 
+    var hasChanges = false
+
+    static var cache: MemoryCache<Gym>?
+
     init(id: String, lat: Double, lon: Double, name: String?, url: String?, guardPokemonId: UInt16?, enabled: Bool?,
          lastModifiedTimestamp: UInt32?, teamId: UInt8?, raidEndTimestamp: UInt32?, raidSpawnTimestamp: UInt32?,
          raidBattleTimestamp: UInt32?, raidPokemonId: UInt16?, raidLevel: UInt8?, availbleSlots: UInt16?,
